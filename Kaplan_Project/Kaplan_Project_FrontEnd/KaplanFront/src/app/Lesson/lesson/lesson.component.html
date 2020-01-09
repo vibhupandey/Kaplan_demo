@@ -1,0 +1,46 @@
+<div *ngIf="lessonDatamodel.length>0">
+        <div  [@listStagger]='lessonDatamodel.length'>
+    <div *ngFor="let cardItem of lessonDatamodel " >
+        <h3 class="card-title-custom">{{cardItem.date | date:'fullDate'}}</h3>
+        <div  [@listStagger]='cardItem.length'>
+        <div class="div-card cards" *ngFor="let items of cardItem.newsfeed"   >
+            <mat-card layout="row" layout-align="center center">
+                <mat-grid-list cols="10">
+                    <mat-grid-tile colspan="1">
+                        <div>
+                            <img class="mat-card-avatar extra-padding border-avatar" src={{items.subjectPhotoUrl}}>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile colspan="5">
+                        <div>
+                            <mat-card-content>
+                                <h3>
+                                    <mat-card-title>{{items.title}}</mat-card-title>
+                                </h3>
+                                {{items.description}}
+                            </mat-card-content>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile colspan="1">
+                        <img class="mat-card-avatar extra-padding border-avatar" src={{items.instructorPhotoUrl}}>
+                    </mat-grid-tile>
+                    <mat-grid-tile colspan="1">
+                        <div class="extra-padding extra-margin">
+
+                            <h5>{{items.instructorName}}</h5>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile colspan="2">
+                        <div class="extra-padding">
+                            {{items.time | date:'shortTime'}} -
+                            {{addhours(items.time)  | date:'shortTime'}} EDT
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-card>
+        </div>
+        </div>
+    </div>
+    </div>
+
+</div>

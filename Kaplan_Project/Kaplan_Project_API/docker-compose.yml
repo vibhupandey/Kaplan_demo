@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  kaplan.webapi:
+    image: ${DOCKER_REGISTRY-}kaplanwebapi
+    build:
+      context: .
+      dockerfile: Kaplan\Kaplan.WebApi\Dockerfile

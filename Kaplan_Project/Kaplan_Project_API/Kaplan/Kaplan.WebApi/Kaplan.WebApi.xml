@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kaplan.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.userLogin(System.String,System.String)">
+            <summary>
+            Authenticate the User and returns the user object along with the Role 
+            </summary>
+            <param name="loginId"> userid</param> 
+            <param name="password">password</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.getAllStationCodes(System.String)">
+            <summary>
+            Fetches all the station codes mapped to the Role
+            </summary>
+            <param name="Role"> role of the user</param>
+            <returns>station codes id and station code name</returns>
+        </member>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.getOrders(System.Int32)">
+            <summary>
+            Fetches all the orders mapped to the stationcodeid 
+            </summary>
+            <param name="stationcodeid">stationcode selected by user</param>
+            <returns>orderid, ordername, tls</returns>
+        </member>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.getVin(System.String)">
+            <summary>
+            Fetches all Vin details corresponding to the orderId
+            </summary>
+            <param name="orderId">order selected by user</param>
+            <returns>vinid, vinnumber</returns>
+        </member>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.getProductFeatures(System.String)">
+            <summary>
+            Fetches all product features
+            </summary>
+            <param name="vinId">vin selected by user</param>
+            <returns>model, productFeaturesId, gears,engine,modelYeardrive,door</returns>
+        </member>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.getWorkListStep(System.Int32)">
+            <summary>
+            Fetches sequence, status and workliststep for Lineside Operator
+            </summary>
+            <param name="stationCodeId">stationCode selected by user</param>
+            <returns>sequence, status and workliststep</returns>
+        </member>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.getInstructionCheckListStep(System.Int32)">
+            <summary>
+            Fetches sequence, status and InstructionCheckListStep for Quality Inspector
+            </summary>
+            <param name="stationCodeId">stationCode selected by user</param>
+            <returns>sequence, status and InstructionCheckListStep</returns>
+        </member>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.setWorkListStatus(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            updates  status, Comments and stepexecution time for each step performed by Lineside Operator
+            </summary>
+            <param name="workliststepid">step performed by Lineside Operatorr</param>
+            <returns>return true if data successfully saved in database else false</returns>
+            
+        </member>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.setInstructionCheckListStatus(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            updates  status, Comments and stepexecution time for each step performed by Quality Inspector
+            </summary>
+            <param name="workliststepid">step performed by Quality Inspector</param>
+            <returns>return true if data successfully saved in database else false</returns>
+        </member>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.getWorkListCycleTime(System.Int32)">
+            <summary>
+            fetches the Total time spent by Lineside Operator to complete one cycle
+            </summary>
+            <param name="workliststepid">order selected by user</param>
+            <returns>return total step execution time</returns>
+        </member>
+        <member name="M:Kaplan.WebApi.Controllers.OrderKittingController.getInstructionListCycleTime(System.Int32)">
+            <summary>
+            fetches the Total time spent by Quality Inspector to complete one cycle
+            </summary>
+            <param name="workliststepid">order selected by user</param>
+            <returns>return total step execution time</returns>
+            
+        </member>
+    </members>
+</doc>

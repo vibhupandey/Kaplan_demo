@@ -1,0 +1,69 @@
+.div-card {
+  max-width: inherit; 
+  text-align: left;
+  border-style: initial;
+  margin: 0px auto;
+  width: 65%;
+  }
+  
+  .example-header-image { 
+    width: 40%;
+    height: 40%;
+    border-radius: 50%; 
+    text-align: left; 
+    
+  } 
+  mat-grid-tile {
+    background: #FFFFFF; 
+    padding: 0%;
+    font-size: 74%;
+    color: #223744;
+    height: 1%;  
+  }
+.card-title-custom{
+  text-align: left;
+    color: #585a58ee;
+    padding: 8px 0px;
+    margin: 0px auto;
+    width: 65%;
+
+}
+
+.mat-card {
+ 
+  padding: 0px !important;
+  border-radius: 4px;
+  border: 1px solid #cccc;
+  border-bottom: none;
+}
+.border-avatar{
+  border: 1px solid #b2a8a8;
+  padding: 3px;
+    margin: 3px;
+    width:30%;
+    height: 30%;
+}
+.extra-padding{
+  margin-bottom: 22%;
+  display: inline-flex;
+  
+}
+.extra-margin
+{    
+  margin-bottom: 38%;
+  margin-right: 25%;
+  width: 100%;
+   display: inline-flex;
+}
+.custom-avatar{
+    display: inline-flex;
+    margin-bottom: 57px;
+    margin-left: 15px;
+}
+.custom-h3{
+  display: inline-flex;
+    padding: 0px;
+    vertical-align: top;
+    margin: 0px;
+    margin-top: 3px;
+}
